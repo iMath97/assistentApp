@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prodity Weather App</title>
+
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <header>
+
+        <!-- <img id="whiteLogo" src="./images/prodityLogoWhiteBorderFullBig2.svg" alt="Prodity Logo White">
+        <img id="blackLogo" src="./images/prodityLogoBlackBorderFullBig.svg" alt="Prodity Logo Black"> -->
+
+        <!-- location + config -->
+        <div class="container">
+            <nav>
+                <div>
+                    <p class="location">location</p>
+                </div>
+                <div class="config">
+                    <a href="/">
+                        <img src="./images/icons/gearOutline.svg" alt="Gear Outline">
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- weather temp, min max, windspeed, uv index, humidity, pollen -->
+        <section id="weather">
+            <div class="imageContainer">
+                <div id="hexagonMaxTemp" class="smallHexagon">
+                    <!-- <span id="maxText">max</span> -->
+                    <p id="maxTemp" class="hexagonParagraph"></p>
+                </div>
+                <div id="hexagonMinTemp" class="smallHexagon">
+                    <p id="minTemp" class="hexagonParagraph"></p>
+                </div>
+                <div id="hexagonWindspeed" class="smallHexagon">
+                    <p id="windspeed" class="hexagonParagraph"></p>
+                </div>
+                <div id="hexagonUVindex" class="smallHexagon">
+                    <p id="uv" class="hexagonParagraph"></p>
+                </div>
+                <div id="hexagonHumidity" class="smallHexagon">
+                    <p id="humidity" class="hexagonParagraph"></p>
+                </div>
+                <div id="hexagonPollen" class="mediumHexagon">
+                    <p id="pollen" class="hexagonParagraph"></p>
+                </div>
+                <div id="hexagonMainTemp" class="largeHexagon">
+                    <p id="mainTemp" class="hexagonParagraph"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- weather description -->
+        <section id="weatherDescription">
+            <div class="container">
+                <p id="description1"></p>
+                <p id="description2"></p>
+            </div>
+        </section>
+
+        <!-- weather extra's: 5 days, time -->
+        <section id="weatherExtra">
+            <div class="container">
+                <!-- <p>blabla bla</p> -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- jquery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

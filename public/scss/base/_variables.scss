@@ -1,0 +1,39 @@
+/***************************
+Color Variables
+***************************/
+$white: rgb(238, 238, 238) !default;
+$whiteTransparent: rgba(238, 238, 238, 0.116) !default;
+$black: #333 !default;
+$blackTransparent: rgba(51, 51, 51, 0.432) !default;
+
+$text-primary-color: $white !default;
+$text-secondary-color: $black !default;
+// $btn-primary: $green !default;
+// $btn-primary-text: $white !default;
+// $btn-primary-text-hover: $green !default;
+$primary-background: $whiteTransparent !default;
+$secondary-background: $blackTransparent !default;
+// $primary-mask-color: $orange !default;
+
+/***************************
+Font Variables
+***************************/
+// @font-face{
+//     font-family: 'lobster';
+//     src: url('../files/fonts/Lobster-Regular.ttf') format('truetype');
+// }
+// @font-face{
+//     font-family: 'montserrat';
+//     src: url('../files/fonts/Montserrat-Regular.ttf') format('truetype');
+// }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+$montserrat: 'Montserrat', sans-serif;
+// $montserrat: 'montserrat';
+$lobster: 'Lobster', cursive;
+// $lobster: 'lobster';
+
+$heading-font: $montserrat !default;
+$text-font: $lobster !default;
+$link-font: $lobster !default;

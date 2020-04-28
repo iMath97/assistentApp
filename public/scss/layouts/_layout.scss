@@ -1,0 +1,33 @@
+/***************************
+****************************
+Layout Styles
+****************************
+***************************/
+/* Content Container*/
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1170px;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+main{
+    background: $secondary-background;
+}
+#weather{
+    height: 100%;
+    @include flex(center, center, null, null);
+}
+#weatherDescription{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    // background: $secondary-background;
+}

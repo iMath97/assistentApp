@@ -1,0 +1,77 @@
+/***************************
+Images Modules
+***************************/
+// hexagon weather
+
+.imageContainer{
+    height: 26rem;
+    width: 22.2rem;
+    margin-right: .3rem;
+    margin-left: .3rem;
+    // background: rgba(173, 216, 230, 0.281);
+    position: relative;
+}
+.smallHexagon,
+.mediumHexagon,
+.largeHexagon{
+    @include flex(center, center, null, null);
+    background: url(../images/icons/Hexagon.svg);
+    background-repeat: no-repeat;
+}
+.smallHexagon{
+    height: 6.5rem;
+    width: 6.5rem;
+    font-size: 1.7rem;
+    background-size: 6.5rem 6.5rem;
+}
+.mediumHexagon{
+    height: 9rem;
+    width: 9rem;
+    font-size: 2.3rem;
+    background-size: 9rem 9rem;
+}
+.largeHexagon{
+    height: 12rem;
+    width: 12rem;
+    font-size: 3.7rem;
+    background-size: 12rem 12rem;
+}
+
+#hexagonMainTemp{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#hexagonMaxTemp{
+    position: absolute;
+    top: -.1rem;
+    right: 10.5rem;
+}
+#maxText{
+
+}
+#hexagonMinTemp{
+    position: absolute;
+    top: 5.7rem;
+    right: 10.5rem;
+}
+#hexagonWindspeed{
+    position: absolute;
+    top: 8.6rem;
+    right: 15.6rem;
+}
+#hexagonUVindex{
+    position: absolute;
+    top: 11.5rem;
+    right: 10.5rem;
+}
+#hexagonHumidity{
+    position: absolute;
+    top: 14.4rem;
+    right: 5.4rem;
+}
+#hexagonPollen{
+    position: absolute;
+    top: 17.2rem;
+    right: 9.9rem;
+}
