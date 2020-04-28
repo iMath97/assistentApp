@@ -10,6 +10,10 @@ Images Modules
     margin-left: .3rem;
     // background: rgba(173, 216, 230, 0.281);
     position: relative;
+    span{
+        font-size: .8rem;
+        text-transform: uppercase;
+    }
 }
 .smallHexagon,
 .mediumHexagon,
@@ -40,38 +44,78 @@ Images Modules
 #hexagonMainTemp{
     position: absolute;
     top: 0;
-    right: 0;
+    right: -.1rem;
+    #temperatureIcon{
+        height: 3rem;
+        width: auto;
+        position: absolute;
+        top: 1rem;
+    }
 }
 #hexagonMaxTemp{
     position: absolute;
     top: -.1rem;
     right: 10.5rem;
 }
-#maxText{
-
-}
 #hexagonMinTemp{
     position: absolute;
     top: 5.7rem;
     right: 10.5rem;
 }
+#maxText,
+#minText{
+    position: absolute;
+    top: .8rem;
+    left: -.6rem;
+    transform: rotate(-59deg);
+}
 #hexagonWindspeed{
     position: absolute;
     top: 8.6rem;
     right: 15.6rem;
+    #windspeedText{
+        position: absolute;
+        top: .1rem;
+        left: -1.7rem;
+        transform: rotate(-60deg);
+    }
 }
 #hexagonUVindex{
     position: absolute;
     top: 11.5rem;
     right: 10.5rem;
+    #UVText{
+        position: absolute;
+        top: .9rem;
+        right: -.2rem;
+        transform: rotate(60deg);
+    }
 }
 #hexagonHumidity{
     position: absolute;
     top: 14.4rem;
     right: 5.4rem;
+    #humidityText{
+        position: absolute;
+        top: 1.7rem;
+        right: -2.4rem;
+        transform: rotate(59deg);
+    }
+    #humidityIcon{
+        height: 2rem;
+        width: auto;
+        position: absolute;
+        top: 1rem;
+    }
 }
 #hexagonPollen{
     position: absolute;
     top: 17.2rem;
-    right: 9.9rem;
+    right: 9.8rem;
+    #pollenText{
+        position: absolute;
+        bottom: -.6rem;
+        left: 2.9rem;
+        // transform: rotate(59deg);
+    }
 }
