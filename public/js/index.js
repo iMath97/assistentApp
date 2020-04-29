@@ -92,22 +92,22 @@ function render(data){
     descriptionWeather = descriptionWeather.toLowerCase();
 
     switch (descriptionWeather) {
-        // case 'thunderstorm':
-        //     $("body").css("background-image", "url('../images/weather/lightning.jpg')");
-        //     break;
-        // case 'drizzle':
-        // case 'rain':
-        //     $("body").css("background-image", "url('../images/weather/rain.jpg')");
-        //     break;
-        // case 'snow':
-        //     $("body").css("background-image", "url('../images/weather/snow.jpg')");
-        //     break;
-        // case 'clear':
-        //     $("body").css("background-image", "url('../images/weather/sunny.jpg')");
-        //     break;
-        // case 'clouds':
-        //     $("body").css("background-image", "url('../images/weather/clouds.jpg')");
-        //     break;
+        case 'thunderstorm':
+            $("body").css("background-image", "url('../images/weather/lightning.jpg')");
+            break;
+        case 'drizzle':
+        case 'rain':
+            $("body").css("background-image", "url('../images/weather/rain.jpg')");
+            break;
+        case 'snow':
+            $("body").css("background-image", "url('../images/weather/snow.jpg')");
+            break;
+        case 'clear':
+            $("body").css("background-image", "url('../images/weather/sunny.jpg')");
+            break;
+        case 'clouds':
+            $("body").css("background-image", "url('../images/weather/clouds.jpg')");
+            break;
         default:
             $("body").css("background-image", "url('../images/weather/sunny.jpg')");
             break;
