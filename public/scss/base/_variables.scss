@@ -4,7 +4,8 @@ Color Variables
 $white: rgb(238, 238, 238) !default;
 $whiteTransparent: rgba(238, 238, 238, 0.116) !default;
 $black: #333 !default;
-$blackTransparent: rgba(51, 51, 51, 0.432) !default;
+$blackTransparent: rgba(51, 51, 51, 0.464) !default;
+$blackTransparentDarker: rgba(51, 51, 51, 0.664) !default;
 
 $text-primary-color: $white !default;
 $text-secondary-color: $black !default;
@@ -13,6 +14,7 @@ $text-secondary-color: $black !default;
 // $btn-primary-text-hover: $green !default;
 $primary-background: $whiteTransparent !default;
 $secondary-background: $blackTransparent !default;
+$secondary-background-dark: $blackTransparentDarker !default;
 // $primary-mask-color: $orange !default;
 
 /***************************

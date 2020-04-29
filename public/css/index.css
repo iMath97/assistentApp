@@ -416,6 +416,7 @@ Color Variables
 Font Variables
 ***************************/
 /* 768px / 16px = 48em */
+/* 768px / 16px = 48em */
 /* Extra Small Only */
 /* Small Devices, Tablets */
 /***************************
@@ -490,7 +491,7 @@ header {
 }
 
 main {
-  background: rgba(51, 51, 51, 0.432);
+  background: rgba(51, 51, 51, 0.464);
 }
 
 #weather {
@@ -505,6 +506,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
+  background: rgba(51, 51, 51, 0.664);
 }
 
 /***************************
@@ -515,14 +517,21 @@ Images Modules
 ***************************/
 .imageContainer {
   height: 26rem;
-  width: 22.2rem;
+  width: 16rem;
   margin-right: 0.3rem;
   margin-left: 0.3rem;
+  background: rgba(173, 216, 230, 0.281);
   position: relative;
+  top: -1.8rem;
 }
 .imageContainer span {
   font-size: 0.8rem;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 320px) {
+  .imageContainer {
+    width: 16rem;
+  }
 }
 
 .smallHexagon,
@@ -558,8 +567,8 @@ Images Modules
 
 #hexagonMainTemp {
   position: absolute;
-  top: 0;
-  right: -0.1rem;
+  top: 3rem;
+  right: 0rem;
 }
 #hexagonMainTemp #temperatureIcon {
   height: 3rem;
@@ -570,14 +579,14 @@ Images Modules
 
 #hexagonMaxTemp {
   position: absolute;
-  top: -0.1rem;
-  right: 10.5rem;
+  top: -2.5rem;
+  right: 4.1rem;
 }
 
 #hexagonMinTemp {
   position: absolute;
-  top: 5.7rem;
-  right: 10.5rem;
+  top: 0.4rem;
+  right: 9.3rem;
 }
 
 #maxText,
@@ -590,8 +599,8 @@ Images Modules
 
 #hexagonWindspeed {
   position: absolute;
-  top: 8.6rem;
-  right: 15.6rem;
+  top: 11rem;
+  right: 9.3rem;
 }
 #hexagonWindspeed #windspeedText {
   position: absolute;
@@ -602,8 +611,8 @@ Images Modules
 
 #hexagonUVindex {
   position: absolute;
-  top: 11.5rem;
-  right: 10.5rem;
+  top: 14rem;
+  right: 4.2rem;
 }
 #hexagonUVindex #UVText {
   position: absolute;
@@ -614,8 +623,8 @@ Images Modules
 
 #hexagonHumidity {
   position: absolute;
-  top: 14.4rem;
-  right: 5.4rem;
+  top: 16.9rem;
+  right: -0.9rem;
 }
 #hexagonHumidity #humidityText {
   position: absolute;
@@ -632,8 +641,8 @@ Images Modules
 
 #hexagonPollen {
   position: absolute;
-  top: 17.2rem;
-  right: 9.8rem;
+  top: 19.7rem;
+  right: 3.6rem;
 }
 #hexagonPollen #pollenText {
   position: absolute;
