@@ -1,24 +1,32 @@
+// set deploy or dev
+const status = "deploy" //deploy when deploying and dev when local
+
+
 const express = require('express');
 const path = require('path');
-require('dotenv').config();
-const fetch = require('node-fetch');
-const livereload = require('livereload');
-const connectLivereload = require('connect-livereload');
-
-// livereload
-var liveReloadServer = livereload.createServer();
-liveReloadServer.watch(path.join(__dirname, 'public'));
-
-liveReloadServer.server.once("connection", () => {
-    setTimeout(() => {
-        liveReloadServer.refresh("/");
-    }, 100);
-});
 
 // app
 const app = express();
 
-app.use(connectLivereload());
+if(status == "dev"){
+    require('dotenv').config();
+    const livereload = require('livereload');
+    const connectLivereload = require('connect-livereload');
+    const fetch = require('node-fetch');
+
+    // livereload
+    var liveReloadServer = livereload.createServer();
+    liveReloadServer.watch(path.join(__dirname, 'public'));
+
+    liveReloadServer.server.once("connection", () => {
+        setTimeout(() => {
+            liveReloadServer.refresh("/");
+        }, 100);
+    });
+
+    app.use(connectLivereload());
+}
+
 
 // routes
 const weatherRouter = require('./routes/weather');
