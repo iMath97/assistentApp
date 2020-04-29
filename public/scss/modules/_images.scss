@@ -19,7 +19,8 @@ Images Modules
 .mediumHexagon,
 .largeHexagon{
     @include flex(center, center, null, null);
-    background: url(../images/icons/Hexagon.svg);
+    // background: url(../images/icons/Hexagon.svg);
+    background: url(../images/icons/HexagonBg.svg);
     background-repeat: no-repeat;
 }
 .smallHexagon{
