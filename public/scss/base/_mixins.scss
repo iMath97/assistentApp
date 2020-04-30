@@ -1,5 +1,9 @@
 @mixin flex($justify, $align, $direction, $flow){
     display: flex;
+    display: -webkit-box; /* browser prefix */
+    display: -moz-box; /* browser prefix */
+    display: -ms-flexbox; /* browser prefix */
+    display: -webkit-flex; /* browser prefix */
     justify-content: $justify;
     align-items: $align;
     flex-direction: $direction;

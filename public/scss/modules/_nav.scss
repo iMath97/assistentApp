@@ -5,19 +5,10 @@ nav{
     padding-top: .5rem;
     padding-bottom: .5rem;
     @include flex(space-between, center, null, null);
-    .location{
-        font-size: 1.2rem;
-        text-transform: capitalize;
-        font-family: $heading-font;
-        line-height: 0;
-    }
     .config{
         img{
             height: 1.8rem;
             width: auto;
         }
     }
-}
-p{
-    font-family: $montserrat;
 }

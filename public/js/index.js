@@ -67,12 +67,22 @@ function render(data){
     const temp = Math.round(`${data.main.temp}`);
     const windspeed = `${data.wind.speed}`;
     const humidity = `${data.main.humidity}`;
+    const visibility = `${data.visibility}`;
+    const visibilitykm = visibility/1000;
+    
 
     $("#maxTemp").text(`${maxTemp}\xB0C`);
     $("#minTemp").text(`${minTemp}\xB0C`);
     $("#mainTemp").text(`${temp}\xB0C`);
     $("#windspeed").text(windspeed);
     $("#humidity").text(`${humidity}%`);
+
+    if(visibility >= 1000){
+        $("#visibility").text(`${visibilitykm} KM`);
+    } else {
+        $("#visibility").text(`${visibility} M`);
+    }
+    
 
     // description
     const desc1 = `${data.weather[0].main}`;
@@ -111,5 +121,36 @@ function render(data){
         default:
             $("body").css("background-image", "url('../images/weather/sunny.jpg')");
             break;
+    }
+
+    // weather icon
+    const baseurl = "http://openweathermap.org/img/w/";
+    let weatherIcon = `${baseurl}${data.weather[0].icon}.png`;
+    $("#weatherIcon").attr("src", `${weatherIcon}`);
+    
+    // render winddirection
+    let winddirection = `${data.wind.deg}`;
+
+    const WIND_DIRECTION_COUNTRY = {
+        BE: ["N", "NO", "O", "ZO", "Z", "ZW", "W", "NW"],
+        EN: ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
+    };
+
+    if(winddirection >= 345 && winddirection < 15){
+        $("#windDirection").text(WIND_DIRECTION_COUNTRY.EN[0]);
+    }else if(winddirection >= 15 && winddirection < 75){
+        $("#windDirection").text(WIND_DIRECTION_COUNTRY.EN[1]);
+    }else if(winddirection >= 75 && winddirection < 115){
+        $("#windDirection").text(WIND_DIRECTION_COUNTRY.EN[2]);
+    }else if(winddirection >= 115 && winddirection < 165){
+        $("#windDirection").text(WIND_DIRECTION_COUNTRY.EN[3]);
+    }else if(winddirection >= 165 && winddirection < 205){
+        $("#windDirection").text(WIND_DIRECTION_COUNTRY.EN[4]);
+    }else if(winddirection >= 205 && winddirection < 255){
+        $("#windDirection").text(WIND_DIRECTION_COUNTRY.EN[5]);
+    }else if(winddirection >= 255 && winddirection < 285){
+        $("#windDirection").text(WIND_DIRECTION_COUNTRY.EN[6]);
+    }else if(winddirection >= 285 && winddirection < 345){
+        $("#windDirection").text(WIND_DIRECTION_COUNTRY.EN[7]);
     }
 }

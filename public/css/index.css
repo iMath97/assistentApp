@@ -7,7 +7,6 @@ Reset and Base Imports
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 html {
   font-family: sans-serif;
   /* 1 */
@@ -415,6 +414,16 @@ Color Variables
 /***************************
 Font Variables
 ***************************/
+@font-face {
+  font-family: "Bowbly";
+  src: url("../files/fonts/BowlbyOne-Regular.otf") format("otf");
+  font-weight: bolder;
+}
+@font-face {
+  font-family: "Bevan";
+  src: url("../files/fonts/Bevan.ttf") format("ttf");
+  font-weight: bolder;
+}
 /* 768px / 16px = 48em */
 /* 768px / 16px = 48em */
 /* Extra Small Only */
@@ -427,6 +436,7 @@ Reset
 /* Change all elements to use border-box */
 html {
   box-sizing: border-box;
+  user-select: none;
 }
 
 *, *:before, *:after {
@@ -445,7 +455,7 @@ main {
 }
 
 body {
-  font-family: "Lobster", cursive;
+  font-family: "Bowbly";
   font-weight: normal;
   color: #eeeeee;
   height: 100%;
@@ -465,6 +475,31 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+span {
+  font-family: "Bowbly";
+}
+
+p {
+  font-family: "Bevan";
+}
+
+.location {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  line-height: 0;
+}
+
+#description1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+#description2 {
+  font-size: 1.5rem;
+  margin: 0.3rem 0;
 }
 
 /***************************
@@ -498,6 +533,14 @@ main {
 #weather {
   height: 100%;
   display: flex;
+  display: -webkit-box;
+  /* browser prefix */
+  display: -moz-box;
+  /* browser prefix */
+  display: -ms-flexbox;
+  /* browser prefix */
+  display: -webkit-flex;
+  /* browser prefix */
   justify-content: center;
   align-items: center;
 }
@@ -538,6 +581,14 @@ Images Modules
 .mediumHexagon,
 .largeHexagon {
   display: flex;
+  display: -webkit-box;
+  /* browser prefix */
+  display: -moz-box;
+  /* browser prefix */
+  display: -ms-flexbox;
+  /* browser prefix */
+  display: -webkit-flex;
+  /* browser prefix */
   justify-content: center;
   align-items: center;
   background: url(../images/icons/HexagonBg.svg);
@@ -570,16 +621,17 @@ Images Modules
   top: 3rem;
   right: 0rem;
 }
-#hexagonMainTemp #temperatureIcon {
-  height: 3rem;
+#hexagonMainTemp #weatherIcon {
+  height: 4rem;
   width: auto;
   position: absolute;
-  top: 1rem;
+  top: 0.6rem;
+  filter: drop-shadow(0 1rem 0.5rem #666);
 }
 
 #hexagonMaxTemp {
   position: absolute;
-  top: -2.5rem;
+  top: -2.6rem;
   right: 4.1rem;
 }
 
@@ -608,16 +660,25 @@ Images Modules
   left: -1.7rem;
   transform: rotate(-60deg);
 }
+#hexagonWindspeed #windspeed {
+  position: relative;
+  top: 0.7rem;
+}
+#hexagonWindspeed #windDirection {
+  position: absolute;
+  top: -0.3rem;
+  font-size: 1.4rem;
+}
 
-#hexagonUVindex {
+#hexagonVisibility {
   position: absolute;
   top: 14rem;
   right: 4.2rem;
 }
-#hexagonUVindex #UVText {
+#hexagonVisibility #visText {
   position: absolute;
   top: 0.9rem;
-  right: -0.2rem;
+  right: -2rem;
   transform: rotate(60deg);
 }
 
@@ -633,10 +694,10 @@ Images Modules
   transform: rotate(59deg);
 }
 #hexagonHumidity #humidityIcon {
-  height: 2rem;
+  height: 1.2rem;
   width: auto;
   position: absolute;
-  top: 1rem;
+  top: 0.8rem;
 }
 
 #hexagonPollen {
@@ -657,22 +718,20 @@ nav {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   display: flex;
+  display: -webkit-box;
+  /* browser prefix */
+  display: -moz-box;
+  /* browser prefix */
+  display: -ms-flexbox;
+  /* browser prefix */
+  display: -webkit-flex;
+  /* browser prefix */
   justify-content: space-between;
   align-items: center;
-}
-nav .location {
-  font-size: 1.2rem;
-  text-transform: capitalize;
-  font-family: "Montserrat", sans-serif;
-  line-height: 0;
 }
 nav .config img {
   height: 1.8rem;
   width: auto;
-}
-
-p {
-  font-family: "Montserrat", sans-serif;
 }
 
 /***************************

@@ -20,22 +20,22 @@ $secondary-background-dark: $blackTransparentDarker !default;
 /***************************
 Font Variables
 ***************************/
-// @font-face{
-//     font-family: 'lobster';
-//     src: url('../files/fonts/Lobster-Regular.ttf') format('truetype');
-// }
-// @font-face{
-//     font-family: 'montserrat';
-//     src: url('../files/fonts/Montserrat-Regular.ttf') format('truetype');
-// }
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@font-face{
+    font-family: 'Bowbly';
+    src: url('../files/fonts/BowlbyOne-Regular.otf') format('otf');
+    font-weight: bolder;
+}
+@font-face{
+    font-family: 'Bevan';
+    src: url('../files/fonts/Bevan.ttf') format('ttf');
+    font-weight: bolder;
+}
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 $montserrat: 'Montserrat', sans-serif;
-// $montserrat: 'montserrat';
-$lobster: 'Lobster', cursive;
-// $lobster: 'lobster';
+$bowbly: 'Bowbly';
+$bevan: 'Bevan';
 
 $heading-font: $montserrat !default;
-$text-font: $lobster !default;
-$link-font: $lobster !default;
+$text-font: $bowbly !default;
+$number-font: $bevan !default;
